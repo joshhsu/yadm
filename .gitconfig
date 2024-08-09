@@ -1,0 +1,24 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Josh Hsu
+	email = josh.hsu@icana-rf.com
+[core]
+	editor = vim
+[credential]
+	helper = manager
+[alias]
+	tree = log --oneline --graph --decorate --all
+	tagcommit = rev-list -n 1
+	co = checkout
+	br = branch
+	st = status
+	l = log --oneline --graph
+	ls = log --graph --pretty=format:"%h <%an> %ar %s"
+[diff]
+	tool = vimdiff
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
